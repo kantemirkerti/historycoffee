@@ -23,7 +23,7 @@
 }
 
 .reveal-svg {
-    width: 100%;
+    width: 500px;
     opacity: 0;
     animation: fadeInClip 4s ease-out forwards;
     clip-path: inset(0 100% 0 0); /* Start fully clipped on the right */
