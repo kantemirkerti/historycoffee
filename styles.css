@@ -4,7 +4,7 @@
 }
 
 .container {
-    display: flex;;
+    display: flex;
     height: 100vh;
     width: 100vw;
     background-color: #ede8e8;
@@ -17,17 +17,13 @@
     height: 20vh;
     width: 100%;
     background-color: #363636;
+    overflow: hidden;
 }
 
-#logo {
-    width: 90%;
-}
-
-.reveal-svg {
+.reveal {
     display: flex;
     justify-content: center;
-    width: 80vw;
-    height: 100%;
+    padding: 10%;
     opacity: 0;
     animation: fadeInClip 4s ease-out forwards;
     clip-path: inset(0 100% 0 0); 
