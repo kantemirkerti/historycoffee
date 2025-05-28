@@ -12,21 +12,25 @@
 
 .logo {
     display: flex;
+    margin: 10px;
     justify-content: center;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     background-color: #363636;
 }
 
 #logo {
-    width: 100%;
+    width: 90%;
 }
 
 .reveal-svg {
-    width: 500px;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 100%;
     opacity: 0;
     animation: fadeInClip 4s ease-out forwards;
-    clip-path: inset(0 100% 0 0); /* Start fully clipped on the right */
+    clip-path: inset(0 100% 0 0); 
   }
 
   @keyframes fadeInClip {
@@ -36,6 +40,6 @@
     }
     100% {
       opacity: 1;
-      clip-path: inset(0 0% 0 0); /* Reveal fully */
+      clip-path: inset(0 0% 0 0);
     }
   }
