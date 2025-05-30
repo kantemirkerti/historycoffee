@@ -14,9 +14,7 @@ const box = document.querySelector('.item-box');
     }, 5000);
 
     const images = [
-        'images/sample1.jpg',
-        'images/sample2.jpg',
-        'images/sample3.jpg'
+        'images/IMG_3964'
       ];
       
       let currentIndex = 0;
