@@ -4,7 +4,8 @@ const box = document.querySelector('.item-box');
 
     setInterval(() => {
         scrollIndex++;
-        if (scrollIndex * scrollStep >= box.scrollWidth) {
+        if ((scrollIndex + 1) * scrollStep > box.scrollWidth)
+          {
             scrollIndex = 0;
         }
         box.scrollTo({
@@ -14,7 +15,8 @@ const box = document.querySelector('.item-box');
     }, 5000);
 
     const images = [
-        'images/IMG_3964'
+        'images/IMG_3964',
+        'images/IMG_3982'
       ];
       
       let currentIndex = 0;
