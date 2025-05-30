@@ -14,28 +14,22 @@ const box = document.querySelector('.item-box');
         });
     }, 5000);
 
-    const images = [
-        'images/IMG_3964',
-        'images/IMG_3982'
-      ];
-      
-      let currentIndex = 0;
-      const carouselImage = document.getElementById('carouselImage');
-      
-      function updateImage() {
-        carouselImage.src = images[currentIndex];
-      }
-      
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateImage();
-      }
-      
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateImage();
-      }
-      
-      // Optional: auto-advance every 5 seconds
-      // setInterval(nextSlide, 5000);
+    const track = document.getElementById('carouselTrack');
+    const totalSlides = track.children.length;
+    let currentIndex = 0;
+    
+    function updateSlidePosition() {
+      const offset = -currentIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    }
       
