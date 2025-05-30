@@ -12,3 +12,30 @@ const box = document.querySelector('.item-box');
             behavior: 'smooth'
         });
     }, 5000);
+
+    const images = [
+        'images/sample1.jpg',
+        'images/sample2.jpg',
+        'images/sample3.jpg'
+      ];
+      
+      let currentIndex = 0;
+      const carouselImage = document.getElementById('carouselImage');
+      
+      function updateImage() {
+        carouselImage.src = images[currentIndex];
+      }
+      
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+      }
+      
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+      }
+      
+      // Optional: auto-advance every 5 seconds
+      // setInterval(nextSlide, 5000);
+      
