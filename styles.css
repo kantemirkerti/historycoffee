@@ -235,12 +235,22 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .carousel-box {
-        height: 50vh;
+    .carousel-box,
+    .carousel,
+    .carousel-track-wrapper,
+    .carousel-track {
+        height: auto;
+    }
+
+    .carousel-track img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .carousel-btn {
         font-size: 1.5rem;
         padding: 6px;
+        top: 50%; /* re-center vertically */
     }
 }
