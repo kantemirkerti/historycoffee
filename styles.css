@@ -270,3 +270,28 @@
         top: 50%; 
     }
 }
+
+
+footer {
+    margin-bottom: 0;
+    height: 15vh;
+    background-color: #363636;
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    height: 100%;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#phone {
+    scale: 1.05;
+}
+
+.links > a {
+    scale: 0.8;
+}
