@@ -151,7 +151,11 @@
     }
 
     .item {
-        min-width: 10vw;
+        width: 20vw;
+    }
+
+    .item img {
+        height: 20vh;
     }
 }
 
