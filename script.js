@@ -15,12 +15,13 @@ const box = document.querySelector('.item-box');
     }, 5000);
 
     const track = document.getElementById('carouselTrack');
+    const wrapper = document.querySelector('.carousel-track-wrapper');
     const totalSlides = track.children.length;
     let currentIndex = 0;
     
     function updateSlidePosition() {
-      const offset = -currentIndex * 100;
-      track.style.transform = `translateX(${offset}%)`;
+      const offset = currentIndex * wrapper.clientWidth;
+      wrapper.scrollTo({ left: offset, behavior: 'smooth' });
     }
     
     function nextSlide() {
@@ -32,4 +33,4 @@ const box = document.querySelector('.item-box');
       currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
       updateSlidePosition();
     }
-      
+    

@@ -189,17 +189,26 @@
 
 /* Navigation buttons */
 .carousel-btn {
-    position: absolute;
-    top: 35%;
-    transform: translateY(-50%);
-    border: none;
-    color: white;
-    font-size: 4rem;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    background: transparent;
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
+        
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background: transparent;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        color: white;
+        font-size: 1.5rem; /* Adjust to fit inside cleanly */
+        cursor: pointer;
+        z-index: 10;
+        padding: 0; /* Important: avoids oval shape */
+    
 }
 
 .carousel-btn:hover {
@@ -217,20 +226,27 @@
 .carousel-track-wrapper {
     width: 100%;
     height: 66vh;
-    overflow: hidden;
+    overflow-x: auto;        
+    overflow-y: hidden;
     position: relative;
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; /* smoother on iOS */
   }
   
   .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 66vh;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
   
   .carousel-track img {
     min-width: 100%;
+    height: 100%;
     object-fit: contain;
+    scroll-snap-align: center;
     border-radius: 10px;
+    pointer-events: none; /* prevents image dragging */
   }
 
 /* Responsive adjustments */
@@ -251,6 +267,6 @@
     .carousel-btn {
         font-size: 1.5rem;
         padding: 6px;
-        top: 50%; /* re-center vertically */
+        top: 50%; 
     }
 }
