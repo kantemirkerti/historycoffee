@@ -1,3 +1,7 @@
+:root {
+    --deepgreen: #061606;
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -13,7 +17,7 @@
     background-color: #ede8e8;
     width: 100vw;
     gap: 10px;
-    padding: 10px;
+    
 }
 
 /* Logo Section */
@@ -21,9 +25,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 30vh;
     width: 100%;
-    background-color: #363636;
+    background-color: var(--deepgreen);
     overflow: hidden;
     padding: 10px;
 }
@@ -138,7 +142,7 @@
 /* Responsive for Small Screens */
 @media (max-width: 768px) {
     .logo {
-        height: 25vh;
+        height: 30vh;
     }
 
     .item-box {
@@ -242,6 +246,8 @@
     height: 100%;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    padding: 10px;
+    gap: 10px;
   }
   
   .carousel-track img {
@@ -279,7 +285,7 @@
 footer {
     margin-bottom: 0;
     height: 15vh;
-    background-color: #363636;
+    background-color: var(--deepgreen);
     display: flex;
     justify-content: center;
 }
