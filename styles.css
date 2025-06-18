@@ -259,6 +259,37 @@
     pointer-events: none; /* prevents image dragging */
   }
 
+/* Desserts Grid*/
+.desserts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.dessert {
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+    align-items: center;
+}
+
+.dessert img {
+    width: 100%;
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    font-size: x-small;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-box,
