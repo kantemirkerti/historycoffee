@@ -25,11 +25,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 100vh;
     width: 100%;
     background-color: var(--deepgreen);
     overflow: hidden;
     padding: 10px;
+}
+
+.logo img {
+    width: 70%;
 }
 
 /* Logo Animation Wrapper */
@@ -142,7 +146,7 @@
 /* Responsive for Small Screens */
 @media (max-width: 768px) {
     .logo {
-        height: 30vh;
+        height: 100vh;
     }
 
     .item-box {
