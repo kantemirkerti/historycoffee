@@ -1,18 +1,28 @@
 const box = document.querySelector('.item-box');
-    const scrollStep = box.clientWidth;
-    let scrollIndex = 0;
+const scrollStep = box.clientWidth;
+let scrollIndex = 0;
+let autoplay = true;
 
-    setInterval(() => {
-        scrollIndex++;
-        if ((scrollIndex + 1) * scrollStep > box.scrollWidth)
-          {
-            scrollIndex = 0;
-        }
-        box.scrollTo({
-            left: scrollIndex * scrollStep,
-            behavior: 'smooth'
-        });
-    }, 5000);
+const autoplayInterval = setInterval(() => {
+    if (!autoplay) return;
+    scrollIndex++;
+    if ((scrollIndex + 1) * scrollStep > box.scrollWidth) {
+        scrollIndex = 0;
+    }
+    box.scrollTo({
+        left: scrollIndex * scrollStep,
+        behavior: 'smooth'
+    });
+}, 5000);
+
+// Stop autoplay on user interaction
+['touchstart', 'mousedown', 'wheel'].forEach(event => {
+    box.addEventListener(event, () => {
+        autoplay = false;
+        clearInterval(autoplayInterval); // optional: permanently stop
+    }, { once: true }); // Only stop once
+});
+
 
     const track = document.getElementById('carouselTrack');
     const wrapper = document.querySelector('.carousel-track-wrapper');
