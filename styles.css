@@ -2,6 +2,17 @@
     --deepgreen: #061606;
 }
 
+/* Fonts */
+@font-face {
+    font-family: "EB Garamond";
+    src: url(https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap);
+}
+
+  h2 {
+    font-family: "EB Garamond";
+    font-weight: 600;
+  }
+
 /* Reset */
 * {
     margin: 0;
