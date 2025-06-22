@@ -75,8 +75,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     background-color: transparent;
-    padding: 10px;
-    margin: 10px 0;
+    margin: 0;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -100,21 +99,20 @@
 .item-container {
     display: flex;
     flex-direction: row;
-    gap: 16px;
     width: max-content;
 }
 
 /* Individual Item */
 .item {
     background-color: transparent;
-    border-radius: 12px;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 10vw;
     flex-shrink: 0;
     transition: transform 0.3s;
+    width: calc(100vw / 8);
+    margin-right: 0;
 }
 
 .item:hover {
@@ -126,7 +124,6 @@
     max-height: 120px;
     object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 10px;
 }
 
 /* Item Text */
@@ -156,12 +153,11 @@
 
     .item-container {
         flex-direction: row;
-        gap: 12px;
         width: 100%;
     }
 
     .item {
-        width: calc((100% - 3 * 12px) / 4);
+       width: calc(100vw / 4);
     }
 
     .item img {
